@@ -1,0 +1,15 @@
+apiVersion: build.openshift.io/v1
+kind: BuildConfig
+metadata:
+  name: builder-image-sample
+spec:
+  output:
+    to:
+      kind: ImageStreamTag
+      name: builder-image-sample:latest
+  source:
+    binary: {}
+    type: Binary
+  strategy:
+    dockerStrategy: {}
+    type: Docker
